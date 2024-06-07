@@ -6,12 +6,5 @@ jobs:
     steps:
       - name: Checkout Current Repo
         uses: actions/checkout@v4
-        
-      - name: Checkout Private Repo
-        uses: actions/checkout@v4
-        with:
-          repository: thechee/podcast-generator
-          token: ${{ secrets.ACCESS_TO_PODCAST_GENERATOR }}
-          path: podcast-generator  # Check out to a subdirectory
       - name: Run Feed Generator
         uses: thechee/podcast-generator@main

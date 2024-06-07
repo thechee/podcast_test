@@ -11,7 +11,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: thechee/podcast-generator
-          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          token: ${{ secrets.ACCESS_TO_PODCAST_GENERATOR }}
           path: podcast-generator  # Check out to a subdirectory
       - name: Run Feed Generator
         uses: thechee/podcast-generator@main

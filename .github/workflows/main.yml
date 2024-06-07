@@ -4,7 +4,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repo
+      - name: Checkout Private Repo
         uses: actions/checkout@v4
+        with:
+          repository: thechee/podcast-generator
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
       - name: Run Feed Generator
         uses: thechee/podcast-generator@main
